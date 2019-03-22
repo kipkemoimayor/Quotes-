@@ -3,7 +3,7 @@
     <h2>Create a Quote to inspire the next Generation</h2>
     <hr>
   </div>
-  <form   #quoteForm='ngForm' class="form-group" action="index.html" method="post">
+  <form (ngSubmit)='submitQuote()'   #quoteForm='ngForm' class="form-group" action="index.html" method="post">
     <div class="form-group">
       <label for="">Enter your name</label>
       <input ngModel required class="form-control" placeholder="Authors name" type="text" id="name" [(ngModel)]='newQuote.userName' #name='ngModel'  name="name" value="">
@@ -22,7 +22,7 @@
       </div>
 
     </div>
-    <button class="btn btn-secondary" type="button" name="button">Post Quote</button>
+    <button class="btn btn-secondary" type="submit" name="button">Post Quote</button>
 
   </form>
 
