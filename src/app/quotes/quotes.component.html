@@ -1,3 +1,5 @@
+<app-form (addNewQuote)='addQuote($event)'></app-form>
+
 <div *ngFor='let quote of quotes;let i=index'  class="">
   <hr class="bg-info">
   <h3>Posted by {{quote.userName }} on {{quote.date|date:"short"}}</h3>
