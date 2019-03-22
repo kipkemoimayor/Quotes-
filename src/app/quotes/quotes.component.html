@@ -9,7 +9,8 @@
         <button (click)='upVote(i)' title="Upvote" class="btn btn-success waves-effect" type="button" name="button"><i class="fas fa-thumbs-up "></i> {{votes}}</button>
         <button (click)='downVote()' title="Downvote" class="btn btn-danger waves-effect" type="button" name="button"><i class="fas fa-thumbs-down "></i> {{dvotes}}</button>
       </div>
-      <button title="Delete this Quote" class="btn btn-outline-danger" type="button" name="button">Delete Quote</button>
+      <!-- <button title="Delete this Quote" class="btn btn-outline-danger" type="button" name="button">Delete Quote</button> -->
+      <app-buttons [quote]='quote'></app-buttons>
 
 
 
