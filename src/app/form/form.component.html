@@ -3,15 +3,16 @@
     <h2>Create a Quote to inspire the next Generation</h2>
     <hr>
   </div>
-  <form #quoteForm='ngForm' class="form-group" action="index.html" method="post">
+  <form   #quoteForm='ngForm' class="form-group" action="index.html" method="post">
     <div class="form-group">
       <label for="">Enter your name</label>
-      <input required class="form-control" placeholder="Authors name" type="text" name="" value="">
+      <input ngModel required class="form-control" placeholder="Authors name" type="text" id="name" [(ngModel)]='newQuote.name' #name='ngModel'  name="name" value="">
+      {{newQuote.name}}
 
     </div>
     <div class="form-group">
       <label for="">What is your Qoute</label>
-      <textarea class="form-control" name="name" rows="3" cols="20" placeholder="Text here"></textarea>
+      <textarea class="form-control" name="quote" rows="3" cols="20" placeholder="Text here"></textarea>
 
     </div>
     <button class="btn btn-secondary" type="button" name="button">Post Quote</button>
