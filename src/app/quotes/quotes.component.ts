@@ -37,6 +37,12 @@ export class QuotesComponent implements OnInit {
     }
   }
 
+  addQuote(quote){
+    let quoteLength=this.quotes.length;
+    quote.id=quoteLength+1;
+    this.quotes.push(quote);
+  }
+
 
   constructor() { }
 

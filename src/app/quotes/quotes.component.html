@@ -1,4 +1,13 @@
-<app-form (addNewQuote)='addQuote($event)'></app-form>
+<div class="row">
+
+
+<div class="col-md-6">
+
+  <app-form (addNewQuote)='addQuote($event)'></app-form>
+</div>
+
+<div class="col-md-6">
+
 
 <div *ngFor='let quote of quotes;let i=index'  class="">
   <hr class="bg-info">
@@ -22,4 +31,6 @@
 
   </div>
 
+</div>
+</div>
 </div>
