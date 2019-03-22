@@ -6,13 +6,20 @@
   <form   #quoteForm='ngForm' class="form-group" action="index.html" method="post">
     <div class="form-group">
       <label for="">Enter your name</label>
-      <input ngModel required class="form-control" placeholder="Authors name" type="text" id="name" [(ngModel)]='newQuote.name' #name='ngModel'  name="name" value="">
-      {{newQuote.name}}
+      <input ngModel required class="form-control" placeholder="Authors name" type="text" id="name" [(ngModel)]='newQuote.userName' #name='ngModel'  name="name" value="">
+      <div [hidden]='name.valid || name.pristine' class="alert alert-danger">
+        This field cannot be empty
+
+      </div>
 
     </div>
     <div class="form-group">
       <label for="">What is your Qoute</label>
-      <textarea class="form-control" name="quote" rows="3" cols="20" placeholder="Text here"></textarea>
+      <textarea ngModel required class="form-control" name="quote" id=quote [(ngModel)]='newQuote.name' #quote='ngModel' rows="3" cols="20" placeholder="Text here"></textarea>
+      <div [hidden]='quote.valid || quote.pristine' class="alert alert-danger">
+        This field cannot be empty
+
+      </div>
 
     </div>
     <button class="btn btn-secondary" type="button" name="button">Post Quote</button>
