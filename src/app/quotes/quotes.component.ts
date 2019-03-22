@@ -8,19 +8,22 @@ import { Quote } from '../quote';
 })
 export class QuotesComponent implements OnInit {
   quotes=[
-    new Quote(1,"Roses are red Violets are blue, King David was the Bravest King ever to be alive, Long live the king ","Collins mayor"),
-    new Quote(2,"Roses are red Violets are blue","Collins mayor"),
+    new Quote(1,"Roses are red Violets are blue, King David was the Bravest King ever to be alive, Long live the king ","Collins mayor",0,0),
+    new Quote(2,"Roses are red Violets are blue","Collins mayor",0,0),
   ]
 
-  
-  votes:number=0;
-  dvotes:number=0;
-  upVote(index){
 
-    this.votes++;
+  // votes:number=0;
+  // dvotes:number=0;
+  upVote(quote){
+    quote.id=this.quotes[quote];
+    quote.upvote++
   }
-  downVote(index){
-    this.dvotes--;
+
+  downVote(quote){
+    quote.id=this.quotes[quote];
+    quote.downvote--
+
   }
 
 

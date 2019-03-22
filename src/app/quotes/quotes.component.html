@@ -5,12 +5,12 @@
       <li  class="list-group-item" ><i class="fas fa-quote-left"></i> {{quote.name}} <i class="fas fa-quote-right" ></i></li>
       <br>
       <div class="container">
-        <p id="quote">  By -- {{quote.userName}}</p>
-        <button (click)='upVote(i)' title="Upvote" class="btn btn-success waves-effect" type="button" name="button"><i class="fas fa-thumbs-up "></i> {{votes}}</button>
-        <button (click)='downVote()' title="Downvote" class="btn btn-danger waves-effect" type="button" name="button"><i class="fas fa-thumbs-down "></i> {{dvotes}}</button>
+        <p id="quote">  By -- {{quote.userName}} </p>
+        <button (click)='upVote(quote)' title="Upvote" class="btn btn-success waves-effect" type="button" name="button"><i class="fas fa-thumbs-up "></i> {{quote.upvote}}</button>
+        <button (click)='downVote(quote)' title="Downvote" class="btn btn-danger waves-effect" type="button" name="button"><i class="fas fa-thumbs-down "></i> {{quote.downvote}}</button>
       </div>
       <!-- <button title="Delete this Quote" class="btn btn-outline-danger" type="button" name="button">Delete Quote</button> -->
-      <app-buttons [quote]='quote'></app-buttons>
+      <app-buttons [quote]='quote' (isDelete)='deleteQuote($event,i)'></app-buttons>
 
 
 
