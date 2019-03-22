@@ -9,14 +9,14 @@ import { Quote } from '../quote';
 export class QuotesComponent implements OnInit {
   quotes=[
     new Quote(1,"Roses are red Violets are blue, King David was the Bravest King ever to be alive, Long live the king ","Collins mayor"),
-    new Quote(2,"Roses are red Violets are blue, King David was the Bravest King ever to be alive, Long live the king ","Collins mayor"),
+  
   ]
 
 
   votes:number=0;
   dvotes:number=0;
   upVote(index){
-    
+
     this.votes++;
   }
   downVote(index){
