@@ -1,4 +1,5 @@
 import { Directive,ElementRef,HostListener} from '@angular/core';
+import { Quote } from './quote'
 
 @Directive({
   selector: '[appHighest]'

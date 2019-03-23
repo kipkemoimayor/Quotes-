@@ -6,6 +6,7 @@ import { Quote } from '../quote';
   templateUrl: './quotes.component.html',
   styleUrls: ['./quotes.component.css']
 })
+
 export class QuotesComponent implements OnInit {
   quotes=[
     new Quote(1,"Roses are red Violets are blue, King David was the Bravest King ever to be alive, Long live the king ","Collins mayor",0,0,new Date(Date())),
@@ -21,7 +22,6 @@ export class QuotesComponent implements OnInit {
   upVote(quote){
     quote.id=this.quotes[quote];
     quote.upvote++
-  
 
   }
 
@@ -31,6 +31,20 @@ export class QuotesComponent implements OnInit {
 
   }
   //geting the maximum votes
+  key:any;
+  holdHighest=[];
+  maxVotes(){
+    for(this.key in this.quotes){
+      if(this.key>1){
+        return this.key;
+      }
+    }
+  }
+
+
+
+
+
 
 
 
@@ -58,5 +72,8 @@ export class QuotesComponent implements OnInit {
 
   ngOnInit() {
   }
+
+
+
 
 }
