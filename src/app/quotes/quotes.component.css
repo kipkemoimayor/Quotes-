@@ -4,3 +4,11 @@
 h3{
   color:#8468;
 }
+#details{
+  background-color: #5853;
+}
+#details:hover{
+  background-color: #5852;
+  box-shadow: -1px 0px 20px black;
+  transition: 500ms;
+}
