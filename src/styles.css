@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+#jumbotron{
+  background-image: url("/assets/img/top.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+  text-transform: capitalize;
+}
+#jumbotron h1{
+  font-weight: 400;
+}
+
+.overlay{
+  background-color: rgba(0,0,0,0.4);
+ border: 0;
+ height: 33vh;
+}
