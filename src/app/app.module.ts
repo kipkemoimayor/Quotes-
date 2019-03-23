@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { QuotesComponent } from './quotes/quotes.component';
 import { ButtonsComponent } from './buttons/buttons.component';
 import { FormComponent } from './form/form.component';
+import { HighestDirective } from './highest.directive';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { FormComponent } from './form/form.component';
     QuotesComponent,
     ButtonsComponent,
     FormComponent,
+    HighestDirective,
   ],
   imports: [
     BrowserModule,
