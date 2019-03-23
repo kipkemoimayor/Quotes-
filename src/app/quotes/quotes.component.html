@@ -7,7 +7,11 @@
 </div>
 
 <div class="col-md-6">
+<div class="card">
+  <br>
+  <p>Top Quote <i class="fas fa-heart"></i> {{hold}}</p>
 
+</div>
 
 <div *ngFor='let quote of quotes;let i=index'  class="">
   <hr class="bg-info">
@@ -25,7 +29,6 @@
       <br>
       <app-buttons [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-buttons>
       </div>
-
 
     </ul>
 
