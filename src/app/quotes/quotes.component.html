@@ -7,9 +7,9 @@
 </div>
 
 <div class="col-md-6">
-<div class="card">
+<div appHighest='show(i)'  class="card">
   <br>
-  <p>Top Quote <i class="fas fa-heart"></i> {{hold}}</p>
+  <p (isHigh)='maxVotes(i)'>The Top Quote has <i class="fas fa-heart "></i> {{hold}} likes</p>
 
 </div>
 
@@ -18,7 +18,7 @@
   <h3>Posted by {{quote.userName }} on {{quote.date|date:"short"}}</h3>
   <div class="card">
     <ul class="list-group">
-      <li   appHighest='show'  class="list-group-item" ><i class="fas fa-quote-left"></i> {{quote.name}} <i class="fas fa-quote-right" ></i></li>
+      <li class="list-group-item" ><i class="fas fa-quote-left"></i> {{quote.name}} <i class="fas fa-quote-right" ></i></li>
 
       <div id="details" class="container">
         <p id="quote">  By -- {{quote.userName}} </p>
@@ -31,6 +31,7 @@
       </div>
 
     </ul>
+
 
 
   </div>

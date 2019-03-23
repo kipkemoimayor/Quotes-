@@ -35,7 +35,7 @@ export class QuotesComponent implements OnInit {
   key:any;
   holdHighest=[];
   i:any;
-  hold:any;
+  hold:any=0;
   maxVotes(){
     for(this.key in this.quotes){
       this.holdHighest.push(this.quotes[this.key].upvote);
@@ -45,10 +45,13 @@ export class QuotesComponent implements OnInit {
     for(this.i in this.holdHighest ){
       if(this.holdHighest[this.i]>=k){
         this.hold=this.holdHighest[this.i];
+        
+
 
       }
     }
   }
+
 
   deleteQuote(isComplete,index){
     if(isComplete){
