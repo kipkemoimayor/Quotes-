@@ -14,7 +14,7 @@
   <h3>Posted by {{quote.userName }} on {{quote.date|date:"short"}}</h3>
   <div class="card">
     <ul class="list-group">
-      <li appHighest  class="list-group-item" ><i class="fas fa-quote-left"></i> {{quote.name}} <i class="fas fa-quote-right" ></i></li>
+      <li appHighest='show'  class="list-group-item" ><i class="fas fa-quote-left"></i> {{quote.name}} <i class="fas fa-quote-right" ></i></li>
 
       <div id="details" class="container">
         <p id="quote">  By -- {{quote.userName}} </p>
@@ -29,6 +29,9 @@
 
     </ul>
 
+
+  </div>
+  <div *ngIf='quote.upvote > mostVotes' class="">
 
   </div>
 

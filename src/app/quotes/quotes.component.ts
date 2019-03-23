@@ -13,11 +13,16 @@ export class QuotesComponent implements OnInit {
   ]
 
 
+
+
+
   // votes:number=0;
   // dvotes:number=0;
   upVote(quote){
     quote.id=this.quotes[quote];
     quote.upvote++
+  
+
   }
 
   downVote(quote){
@@ -25,6 +30,11 @@ export class QuotesComponent implements OnInit {
     quote.downvote--
 
   }
+  //geting the maximum votes
+
+
+
+
   deleteQuote(isComplete,index){
     if(isComplete){
       let toDelete=confirm(`Are you sure tou want to delete this quote`);
