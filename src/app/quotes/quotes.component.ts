@@ -34,7 +34,7 @@ export class QuotesComponent implements OnInit {
   downVote(quote){
     quote.id=this.quotes[quote];
     quote.downvote--
-    swal("you are so mean",{
+    swal("Disliked",{
       buttons:{cancel:false,confirm:false},
       timer:1000,
       className:"red-bg",
