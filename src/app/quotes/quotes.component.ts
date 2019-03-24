@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Quote } from '../quote';
-import  swal from 'sweetalert';
+import  swal  from 'sweetalert';
 
 
 @Component({
@@ -84,16 +84,17 @@ export class QuotesComponent implements OnInit {
   }
 
   addQuote(quote){
-    let quoteLength=this.quotes.length;
-    quote.id=quoteLength+1;
-    this.quotes.push(quote);
     swal({
     title: "Good job!",
-    text: "You Posted a Quote!",
+    text: "Your Quote was Posted successfully!",
     icon: "success",
     buttons: {cancel:false,confirm:false},
     timer:2000
   });
+    let quoteLength=this.quotes.length;
+    quote.id=quoteLength+1;
+    this.quotes.push(quote);
+
   }
 
 
