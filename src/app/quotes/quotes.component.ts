@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Quote } from '../quote';
-import swal from 'sweetalert';
-// import swal from 'sweetalert';
+import  swal from 'sweetalert';
+
 
 @Component({
   selector: 'app-quotes',

@@ -4,7 +4,7 @@
     <hr>
     <p>Make sure it's original and intresting</p>
   </div>
-  <form (ngSubmit)='submitQuote()'   #quoteForm='ngForm' class="form-group" action="index.html" method="post">
+  <form id="form" (ngSubmit)='submitQuote()'   #quoteForm='ngForm' class="form-group" action="index.html" method="post">
     <div class="form-group">
       <label for="">Enter your name</label>
       <input ngModel required class="form-control" placeholder="Authors name" type="text" id="name" [(ngModel)]='newQuote.userName' #name='ngModel'  name="name" value="">
