@@ -22,6 +22,11 @@ export class QuotesComponent implements OnInit {
   upVote(quote){
     quote.id=this.quotes[quote];
     quote.upvote++
+    swal("you liked it",{
+      buttons:false,
+      timer:1000,
+      width:"50px"
+    })
       this.maxVotes();
 
   }
@@ -29,6 +34,12 @@ export class QuotesComponent implements OnInit {
   downVote(quote){
     quote.id=this.quotes[quote];
     quote.downvote--
+    swal("you are so mean",{
+      buttons:false,
+      timer:1000,
+      className:"red-bg",
+
+    })
 
   }
   //geting the maximum votes
@@ -58,12 +69,16 @@ export class QuotesComponent implements OnInit {
 
   deleteQuote(isComplete,index){
     if(isComplete){
-      let toDelete=confirm(`Are you sure tou want to delete this quote`);
-      if(toDelete){
-        this.quotes.splice(index,1)
-      }
-    }
-    else{
+      swal({text:`Are you sure you want to delete this quote`,loading:true,icon:"warning",buttons:true,dangerMode:true}).
+      then((willDelete)=>{
+        if(willDelete){
+          this.quotes.splice(index,1)
+          swal("Quote has been deleted",{icon:"success"})
+        }else{
+          swal("oparation cancelled",{icon:"error"})
+        }
+
+      });
 
     }
   }
@@ -72,6 +87,13 @@ export class QuotesComponent implements OnInit {
     let quoteLength=this.quotes.length;
     quote.id=quoteLength+1;
     this.quotes.push(quote);
+    swal({
+    title: "Good job!",
+    text: "You Posted a Quote!",
+    icon: "success",
+    button: false,
+    timer:2000
+  });
   }
 
 

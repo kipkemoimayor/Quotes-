@@ -12,3 +12,7 @@ h3{
   box-shadow: -1px 0px 20px black;
   transition: 500ms;
 }
+#liked{
+  float: right;
+  transition: 500ms;
+}
