@@ -25,7 +25,7 @@ NO known bugs as at the moment please reach to us if you see any.
 | Generate a new class | Objects | id,name,color |
 | Create an array of Objects | newArr=[] | [1,"Black Ship"] |
 | Get the data stored in the Objects to be displayed in the DOM | [id,name] | "1,Monroe Mayor" |
-| Create a loop to display all the data in different containers  | 1,"kenya","Angular" | <h1>kenya</h1, <h1>Angular</h1 |
+| Create a loop to display all the data in different containers  | 1,"kenya","Angular" | DOM kenya,DOM Angular |
 | Create a Form to collect information | 100 | 100 |
 | Add collected info to the array of Objects | Year, Name | new Object(2018,10,10),"Monroe Peter" |
 | Display the data through ngModel| 100 | DoM=100 |
