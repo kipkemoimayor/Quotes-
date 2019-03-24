@@ -19,8 +19,10 @@ h1{
   background-color: #8740;
   cursor: pointer;
   box-shadow: 3px 3px 30px black;
+  zoom:102%;
+  transition: 500ms;
 }
 .card-title:hover{
-  
+
 
 }
