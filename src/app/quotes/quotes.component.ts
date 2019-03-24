@@ -19,10 +19,10 @@ export class QuotesComponent implements OnInit {
 
   // votes:number=0;
   // dvotes:number=0;
-  upVote(quote,index){
+  upVote(quote){
     quote.id=this.quotes[quote];
     quote.upvote++
-      this.maxVotes(index);
+      this.maxVotes();
 
   }
 
@@ -36,7 +36,7 @@ export class QuotesComponent implements OnInit {
   holdHighest=[];
   i:any;
   hold:any=0;
-  maxVotes(index){
+  maxVotes(){
     for(this.key in this.quotes){
       this.holdHighest.push(this.quotes[this.key].upvote);
     }
