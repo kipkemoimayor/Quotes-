@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Quote } from '../quote';
+import swal from 'sweetalert';
 
 @Component({
   selector: 'app-quotes',
@@ -91,7 +92,7 @@ export class QuotesComponent implements OnInit {
     title: "Good job!",
     text: "You Posted a Quote!",
     icon: "success",
-    button: false,
+    buttons: false,
     timer:2000
   });
   }

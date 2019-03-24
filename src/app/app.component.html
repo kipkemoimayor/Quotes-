@@ -1,64 +1,20 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div id="top-quotes" class="top-quotes">
     <h1>Top quotes</h1>
-
-<div class="row">
-  <div class="col-md-3">
-    <div class="card">
-
-        <p>never sleep without a spear </p>
-        <blockquote cite="http://">
-          by --kinjeketille nkuale
-
-        </blockquote>
-
-
-
-    </div>
-  </div>
-  <div class="col-md-3">
-    <div class="card">
-
-        <p>never sleep without a spear </p>
-        <blockquote cite="http://">
-          by --kinjeketille nkuale
-
-        </blockquote>
-
-
+    <div class="row">
+      <div *ngFor='let topq of topQuotes' class="col-md-3">
+        <div class="card testimonial-card">
+          <div class="card-up indigo lighten-1"></div>
+          <div class="card-body">
+            <h4 class="card-title">{{topq.owner}}</h4>
+            <hr>
+            <p><i class="fas fa-quote-left"></i>{{topq.quote}}</p>
+          </div>
+        </div>
+      </div>
 
     </div>
 
-  </div>
-  <div class="col-md-3">
-    <div class="card">
-
-        <p>never sleep without a spear </p>
-        <blockquote cite="http://">
-          by --kinjeketille nkuale
-
-        </blockquote>
-
-
-
-    </div>
-
-  </div>
-  <div class="col-md-3">
-    <div class="card">
-
-        <p>never sleep without a spear </p>
-        <blockquote cite="http://">
-          by --kinjeketille nkuale
-
-        </blockquote>
-
-
-
-    </div>
-
-  </div>
-</div>
 </div>
 
     <app-quotes></app-quotes>
