@@ -8,6 +8,7 @@ import { QuotesComponent } from './quotes/quotes.component';
 import { ButtonsComponent } from './buttons/buttons.component';
 import { FormComponent } from './form/form.component';
 import { HighestDirective } from './highest.directive';
+import { DatePipe } from './date.pipe';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { HighestDirective } from './highest.directive';
     ButtonsComponent,
     FormComponent,
     HighestDirective,
+    DatePipe,
   ],
   imports: [
     BrowserModule,
