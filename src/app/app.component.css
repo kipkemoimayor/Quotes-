@@ -3,3 +3,8 @@
 .header{
   background: #8743;
 }
+#top-quotes{
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
