@@ -19,10 +19,10 @@ export class QuotesComponent implements OnInit {
 
   // votes:number=0;
   // dvotes:number=0;
-  upVote(quote){
+  upVote(quote,index){
     quote.id=this.quotes[quote];
     quote.upvote++
-      this.maxVotes();
+      this.maxVotes(index);
 
   }
 
@@ -36,7 +36,7 @@ export class QuotesComponent implements OnInit {
   holdHighest=[];
   i:any;
   hold:any=0;
-  maxVotes(){
+  maxVotes(index){
     for(this.key in this.quotes){
       this.holdHighest.push(this.quotes[this.key].upvote);
     }
@@ -45,12 +45,15 @@ export class QuotesComponent implements OnInit {
     for(this.i in this.holdHighest ){
       if(this.holdHighest[this.i]>=k){
         this.hold=this.holdHighest[this.i];
-        
-
-
       }
     }
   }
+  //toogle QuotesComponent
+  // toogleQuotes(index){
+  //   this.quotes[index].showDescription=!this.quotes[index].showDescription;
+  // }
+
+
 
 
   deleteQuote(isComplete,index){

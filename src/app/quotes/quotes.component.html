@@ -7,12 +7,14 @@
 </div>
 
 <div class="col-md-6">
-<div appHighest='show(i)'  class="card">
-  <br>
-  <p (isHigh)='maxVotes(i)'>The Top Quote has <i class="fas fa-heart "></i> {{hold}} likes</p>
+  <div *ngIf='1==1' class="show">
+    <div appHighest='show(i),maxVotes(i)'  class="card">
+      <br>
+      <p (isHigh)='maxVotes(i)'>The Top Quote has <i class="fas fa-heart "></i> {{hold}} likes</p>
 
-</div>
+    </div>
 
+  </div>
 <div *ngFor='let quote of quotes;let i=index'  class="">
   <hr class="bg-info">
   <h3>Posted by {{quote.userName }} on {{quote.date|date:"short"}}</h3>
@@ -31,7 +33,6 @@
       </div>
 
     </ul>
-
 
 
   </div>
