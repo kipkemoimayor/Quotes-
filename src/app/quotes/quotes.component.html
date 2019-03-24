@@ -17,7 +17,7 @@
   </div>
 <div *ngFor='let quote of quotes;let i=index'  class="">
   <hr class="bg-info">
-  <h3>Posted by {{quote.userName }} on {{quote.date|date:"short"}}</h3>
+  <h3>Posted by {{quote.userName }} {{quote.date|dateC}} days ago, on {{quote.date|date}}</h3>
   <div class="card">
     <ul class="list-group">
       <li class="list-group-item" ><i class="fas fa-quote-left"></i> {{quote.name}} <i class="fas fa-quote-right" ></i></li>

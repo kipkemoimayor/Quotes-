@@ -9,8 +9,8 @@ import { Quote } from '../quote';
 
 export class QuotesComponent implements OnInit {
   quotes=[
-    new Quote(1,"Roses are red Violets are blue, King David was the Bravest King ever to be alive, Long live the king ","Collins mayor",0,0,new Date(Date())),
-    new Quote(2,"Roses are red Violets are blue","Collins mayor",0,0,new Date(Date())),
+    new Quote(1,"Roses are red Violets are blue, King David was the Bravest King ever to be alive, Long live the king ","Collins mayor",0,0,new Date(2019,2,22)),
+    new Quote(2,"Roses are red Violets are blue","Collins mayor",0,0,new Date(2019,1,31)),
   ]
 
 
