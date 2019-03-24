@@ -12,3 +12,15 @@ h1{
   text-align: center;
   text-transform: capitalize;
 }
+.card{
+  background-color: #8742;
+}
+.card:hover{
+  background-color: #8740;
+  cursor: pointer;
+  box-shadow: 3px 3px 30px black;
+}
+.card-title:hover{
+  
+
+}
